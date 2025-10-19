@@ -1,11 +1,10 @@
 package model.dao;
 
-import model.entities.Department;
 import model.entities.Seller;
 
 import java.util.List;
 
-public interface sellerDao {
+public interface SellerDao {
     void insert(Seller obj);
     void uptdate(Seller obj);
     void deleteById(Integer id);
