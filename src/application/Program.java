@@ -12,13 +12,13 @@ public class Program {
     public static void main(String[] args) {
         SellerDao sellerDao = DaoFactory.createSellerDao();
 
-        System.out.println("=== TESTE 1: sellerFindById ===");
+        System.out.println("\n=== TESTE 1: sellerFindById ===");
         Seller seller = sellerDao.findById(4);
         System.out.println(seller);
         System.out.println();
 
 
-        System.out.println("=== TESTE 2: sellerFindDepartment ===");
+        System.out.println("\n=== TESTE 2: sellerFindDepartment ===");
         Department dep = new Department(1,null);
         List<Seller> list = sellerDao.findByDepartment(dep);
         for (Seller seller1 : list) {
@@ -27,7 +27,7 @@ public class Program {
         }
         System.out.println();
 
-        System.out.println("=== TESTE 3: sellerFindAll ===");
+        System.out.println("\n=== TESTE 3: sellerFindAll ===");
 
         list = sellerDao.findAll();
         for (Seller seller1 : list) {
@@ -35,11 +35,21 @@ public class Program {
             System.out.println();
         }
 
-        System.out.println("=== TESTE 4: sellerInsert ===");
+        System.out.println("\n=== TESTE 4: sellerInsert ===");
 
         Seller newSeller = new Seller(null,"Greg", "greg@gmail.com", new Date(), 4000.00, dep);
         sellerDao.insert(newSeller);
         System.out.println("Inserted! New id = " + newSeller.getId());
+        System.out.println();
+
+
+        System.out.println("\n=== TESTE 5: sellerInsert ===");
+        seller = sellerDao.findById(1);
+        seller.setName("Marta Waine");
+        sellerDao.update(seller);
+        System.out.println("Updated!");
+
+
 
 
     }
