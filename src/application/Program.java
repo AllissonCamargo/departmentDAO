@@ -45,7 +45,7 @@ public class Program {
 //        System.out.println();
 
 
-        System.out.println("\n=== TESTE 5: sellerInsert ===");
+        System.out.println("\n=== TESTE 5: sellerUpdate ===");
         seller = sellerDao.findById(1);
         seller.setName("Marta Waine");
         sellerDao.update(seller);
