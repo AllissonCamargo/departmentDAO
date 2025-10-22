@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Seller implements Serializable {
     @Serial
-    public static final long serialVersionUID = 1L;
+    public resources final long serialVersionUID = 1L;
 
     private Integer id;
     private String name;
